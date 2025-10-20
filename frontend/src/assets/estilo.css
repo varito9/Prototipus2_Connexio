@@ -1,0 +1,261 @@
+/* 🎮 Estilos generales del juego */
+.game-engine {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1e1e2f, #2e2e48);
+  color: #f4f4f4;
+  font-family: 'Poppins', sans-serif;
+  padding: 2rem;
+}
+
+/* 📄 Contenedor de palabras */
+.paraules-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Cada palabra */
+.paraula {
+  font-size: 1.8rem;
+  margin: 0.4rem 0;
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+/* Palabra activa resaltada */
+.paraula-activa {
+  color: #ffd54f;
+  transform: scale(1.1);
+  font-weight: 600;
+}
+
+/* Letras correctas e incorrectas */
+.correcta {
+  color: #4caf50;
+  transition: color 0.2s ease;
+}
+
+.incorrecta {
+  color: #ff5252;
+  text-decoration: underline wavy #ff5252;
+  transition: color 0.2s ease;
+}
+
+/* Contador de errores */
+.error-comptador {
+  font-size: 0.9rem;
+  color: #ffb74d;
+  margin-left: 10px;
+}
+
+/* Campo de texto principal */
+.text-input {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.8rem 1rem;
+  border: none;
+  border-radius: 12px;
+  outline: none;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  background-color: #3c3c55;
+  color: #f4f4f4;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.text-input:focus {
+  box-shadow: 0 0 10px #ffd54f;
+}
+
+/* ⌨️ Teclado visual */
+.fila {
+  display: flex;
+  justify-content: center;
+  margin: 5px 0;
+}
+
+.letra {
+  background-color: #444466;
+  color: #f4f4f4;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin: 3px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: default;
+  transition: all 0.1s ease;
+}
+
+.letra:hover {
+  background-color: #55557a;
+}
+
+.teclaPremuda {
+  background-color: #ffd54f !important;
+  color: #1e1e2f !important;
+  transform: scale(1.1);
+}
+
+/* 🏁 Estadísticas del juego */
+.estadistiques-container {
+  background-color: #2e2e48;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  margin-top: 3rem;
+  width: 90%;
+  max-width: 700px;
+  animation: fadeIn 0.8s ease;
+}
+
+.estadistiques-container h2 {
+  color: #4caf50;
+  margin-bottom: 0.5rem;
+}
+
+.estadistiques-container h3 {
+  color: #ffd54f;
+  margin-bottom: 1rem;
+}
+
+/* 🧾 Tabla de resultados */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  font-size: 1rem;
+}
+
+th, td {
+  border: 1px solid #555;
+  padding: 10px;
+}
+
+th {
+  background-color: #444466;
+  color: #ffd54f;
+}
+
+td {
+  background-color: #3a3a5c;
+}
+
+tr:nth-child(even) td {
+  background-color: #33334d;
+}
+
+tr:hover td {
+  background-color: #505070;
+}
+
+/* ✨ Animaciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 📱 Adaptabilidad */
+@media (max-width: 600px) {
+  .paraula {
+    font-size: 1.4rem;
+  }
+
+  .text-input {
+    width: 90%;
+    font-size: 1rem;
+  }
+
+  .letra {
+    padding: 8px 10px;
+    font-size: 0.9rem;
+  }
+
+  table {
+    font-size: 0.9rem;
+  }
+}
+
+
+/* 🎯 Estructura general */
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 3rem;
+  color: #ffd54f;
+  text-align: center;
+  margin-top: 2rem;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px rgba(255, 213, 79, 0.4);
+  animation: titleGlow 2s infinite alternate ease-in-out;
+}
+
+/* ✨ Animación del título */
+@keyframes titleGlow {
+  from {
+    text-shadow: 0 0 10px rgba(255, 213, 79, 0.4);
+  }
+  to {
+    text-shadow: 0 0 25px rgba(255, 213, 79, 0.9);
+  }
+}
+
+/* 💬 Subtítulo o descripción opcional */
+p {
+  text-align: center;
+  color: #f4f4f4;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+
+/* 🧱 Fondo general de la app */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #1e1e2f, #2e2e48);
+  height: 100%;
+}
+
+/* 📱 Adaptación para pantallas pequeñas */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
+
+.contador-tiempo {
+  background-color: #3c3c55;
+  color: #ffd54f;
+  font-weight: 600;
+  font-size: 1.2rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(255, 213, 79, 0.3);
+  margin: 1rem 0;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.contador-tiempo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 213, 79, 0.6);
+}
+
