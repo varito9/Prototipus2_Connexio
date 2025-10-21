@@ -11,6 +11,10 @@
   padding: 2rem;
 }
 
+.jugador{
+  color: white;
+}
+
 /* 📄 Contenedor de palabras */
 .paraules-container {
   display: flex;
@@ -259,3 +263,119 @@ html {
   box-shadow: 0 0 15px rgba(255, 213, 79, 0.6);
 }
 
+.vista-container {
+  background-color: rgba(46, 46, 72, 0.85);
+  padding: 2.5rem 3rem;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  width: 100%;
+  max-width: 600px;
+  margin: 2rem auto;
+  animation: fadeIn 0.6s ease;
+}
+
+/* ✨ Animación de aparición suave (reutiliza fadeIn existente) */
+
+/* 🏁 Títulos de las vistas */
+.vista-container h1,
+.vista-container h2 {
+  color: #ffd54f;
+  text-shadow: 0 0 10px rgba(255, 213, 79, 0.4);
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.vista-container h1 {
+  font-size: 2.6rem;
+  animation: titleGlow 2s infinite alternate ease-in-out;
+}
+
+.vista-container h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+/* 🧍 Jugadores conectados */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 2rem 0;
+}
+
+.jugador {
+  background-color: #3a3a5c;
+  padding: 0.8rem 1rem;
+  margin: 0.5rem 0;
+  border-radius: 10px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.jugador:hover {
+  background-color: #505070;
+  transform: translateX(5px);
+}
+
+/* 💬 Input del nombre del jugador */
+input[type="text"] {
+  width: 80%;
+  padding: 0.8rem 1rem;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  background-color: #3c3c55;
+  color: #f4f4f4;
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+input[type="text"]:focus {
+  box-shadow: 0 0 10px #ffd54f;
+  transform: scale(1.03);
+}
+
+/* 🎮 Botones principales */
+button {
+  background-color: #ffd54f;
+  color: #1e1e2f;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 0.8rem 1.6rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 0 10px rgba(255, 213, 79, 0.3);
+}
+
+button:hover {
+  background-color: #ffea80;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 213, 79, 0.5);
+}
+
+/* 📱 Adaptación móvil coherente */
+@media (max-width: 600px) {
+  .vista-container {
+    padding: 1.8rem 1.4rem;
+  }
+
+  .vista-container h1 {
+    font-size: 2.2rem;
+  }
+
+  .vista-container h2 {
+    font-size: 1.4rem;
+  }
+
+  input[type="text"] {
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+  }
+}

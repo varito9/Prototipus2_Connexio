@@ -1,6 +1,9 @@
 <script setup>
+
 import { ref } from 'vue';
 import GameEngine from './components/GameEngine.vue';
+import { io } from 'socket.io-client';
+import communicationManager from './services/communicationManager.js';
 
 // Estat per controlar quina vista es mostra
 const vistaActual = ref('salaEspera'); // 'salaEspera', 'lobby', 'joc'
@@ -9,6 +12,15 @@ const vistaActual = ref('salaEspera'); // 'salaEspera', 'lobby', 'joc'
 const nomJugador = ref('');
 const jugadors = ref([]);
 let socket = null;
+
+function connectarAlServidor(){
+  socket = io('http://localhost:8080');
+  communicationManager.connect(nomJugador.value)
+  communicationManager.onUpdatePlayerList((llistaDeJugadors) =>{
+  jugadors.value = llistaDeJugadors;
+  })
+  vistaActual.value = 'lobby';
+}
 </script>
 
 <template>
@@ -24,7 +36,7 @@ let socket = null;
     <div v-else-if="vistaActual === 'lobby'" class="vista-container">
       <h2>Jugadors Connectats</h2>
       <ul>
-        <li v-for="jugador in jugadors" :key="jugador.id">{{ jugador.name }}</li>
+        <li v-for="jugador in jugadors" :key="jugador.id" class="jugador">{{ jugador.name }}</li>
       </ul>
       <button @click="vistaActual = 'joc'">Comença a Jugar!</button>
     </div>
