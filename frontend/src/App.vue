@@ -14,7 +14,6 @@ const jugadors = ref([]);
 let socket = null;
 
 function connectarAlServidor(){
-  socket = io('http://localhost:8080');
   communicationManager.connect(nomJugador.value)
   communicationManager.onUpdatePlayerList((llistaDeJugadors) =>{
   jugadors.value = llistaDeJugadors;

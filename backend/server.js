@@ -12,7 +12,7 @@ const io = new Server(server, {
 });
 
 const jugadors = {};
-console.log('Servidor Socket.IO escoltant al port 8080');
+console.log('Servidor Socket.IO escoltant al port 23005');
 
 // Funció per enviar la llista de jugadors actualitzada a TOTHOM
 function broadcastPlayerList() {
@@ -38,4 +38,9 @@ io.on('connection', (socket) => {
   });
 });
 
-server.listen(8080);
+const PORT = process.env.PORT || 23005;
+
+
+server.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
