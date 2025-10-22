@@ -1,7 +1,7 @@
 // src/services/communicationManager.js
 import { io } from 'socket.io-client';
 
-const socket = io('http://localhost:23005', { autoConnect: false });
+const socket = io('http://a24alvsalalv.daw.inspedralbes.cat:23005', { autoConnect: false });
 
 // Aquest objecte serà la nostra API per comunicar-nos
 const communicationManager = {
