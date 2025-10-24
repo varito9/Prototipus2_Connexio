@@ -18,4 +18,4 @@ Interfície de "Lobby": Els usuaris poden veure una llista que representa tots e
 
 
 <h2>ENLLAÇ A L'APLICACIÓ</h2>
-http://a24alvsalalv.daw.inspedralbes.cat/DAW2/typeTest/
+<a href="http://a24alvsalalv.daw.inspedralbes.cat/DAW2/typeTest/">PÁGINA DESPLEGADA AQUÍ</a>
