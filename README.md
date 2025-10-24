@@ -15,3 +15,7 @@ Llista d'usuaris actius: Quan un usuari carrega la pàgina, s'estableix una conn
 Presència en Viu: El servidor notifica a tots els clients connectats cada cop que un nou usuari s'uneix o es desconnecta.
 
 Interfície de "Lobby": Els usuaris poden veure una llista que representa tots els altres participants que estan actualment a l'aplicació.
+
+
+<h2>ENLLAÇ A L'APLICACIÓ</h2>
+http://a24alvsalalv.daw.inspedralbes.cat/DAW2/typeTest/
